@@ -1,7 +1,8 @@
 import React from "react";
 import GlobalStyles from "../Globaltyles";
 import data from "../data.json";
-import Icon from "/assets/icon-source.svg";
+import IconSource from "/assets/icon-source.svg";
+import IconArrow from "/assets/icon-chevron.svg";
 import {
   Wikipedia,
   About,
@@ -14,6 +15,13 @@ import {
   Info,
   Container,
 } from "../components/PlanetStyles";
+import {
+  RoundColor,
+  EachPlanet,
+  Arrow,
+  EachPlanetContainer,
+  SubContainer,
+} from "../components/MenuStyles";
 
 const Planet: React.FC = () => {
   return (
@@ -29,7 +37,7 @@ const Planet: React.FC = () => {
             Source :
             <Wikipedia href={data[0].overview.source}> Wikipedia</Wikipedia>
           </Source>
-          <img src={Icon} />
+          <img src={IconSource} />
         </SourceContainer>
         <Section>
           <div>
