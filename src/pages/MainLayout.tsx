@@ -1,9 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Hamburger from "/images/icon-hamburger.svg";
-import { Header, Title, Menu } from "./LayoutStyles";
+import Hamburger from "/assets/icon-hamburger.svg";
+import { Header, Title, Menu } from "../components/MainLayoutStyles";
 
-const Layout: React.FC = () => {
+const MainLayout: React.FC = () => {
   return (
     <>
       <Header>
@@ -15,4 +15,4 @@ const Layout: React.FC = () => {
   );
 };
 
-export default Layout;
+export default MainLayout;

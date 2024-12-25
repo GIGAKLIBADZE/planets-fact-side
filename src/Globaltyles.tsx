@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         width: 100vw;
         min-height: 100vh;
-        background-image: url("./images/background-stars.svg");
+        background-image: url("./assets/background-stars.svg");
         background-color: #070724;
     }
 `;
