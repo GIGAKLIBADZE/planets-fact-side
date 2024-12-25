@@ -9,10 +9,13 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box; 
     }
 
+    html {
+        font-size: 62.5%
+    }
+
     body {
         width: 100vw;
         min-height: 100vh;
-        font-family: 'Antonio', 'Spartan' !important;
         background-image: url("./images/background-stars.svg");
         background-color: #070724;
     }
