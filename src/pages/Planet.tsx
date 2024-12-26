@@ -19,9 +19,6 @@ import { useLocation } from "react-router-dom";
 
 const Planet: React.FC = () => {
   const { name } = useParams();
-  console.log(name);
-
-  console.log(location.pathname);
 
   const planet = data.find((d) => d.name === name);
   console.log(planet);

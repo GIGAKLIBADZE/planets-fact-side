@@ -1,10 +1,15 @@
 import styled from "styled-components";
 
+export const Navbar = styled.nav`
+  padding: 0 2.4rem;
+`;
+
 export const EachPlanetContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding: 2rem 0;
 
   &::after {
     content: "";
@@ -40,6 +45,6 @@ export const EachPlanet = styled.h3`
 `;
 
 export const Arrow = styled.img`
-  width: 0.2rem;
+  width: 0.4rem;
   height: 0.8rem;
 `;

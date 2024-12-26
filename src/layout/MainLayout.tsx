@@ -11,11 +11,6 @@ import HeaderLayout from "../pages/HeaderLayout";
 
 const MainLayout: React.FC = () => {
   const [mobile, setMobile] = useState<boolean>(false);
-  // const [data, setData] = useState<string | undefined>([data.name]);
-
-  // useEffect(() => {
-  //   <Planet />;
-  // }, []);
 
   return (
     <>
@@ -28,9 +23,8 @@ const MainLayout: React.FC = () => {
           onClick={() => setMobile(!mobile)}
         />
       </Header>
-      {mobile ? <HeaderLayout /> : ""}
-      {mobile ? "" : <Menu />}
-      <Outlet />
+      {mobile ? "" : <HeaderLayout />}
+      {mobile ? <Menu mobile={mobile} setMobile={setMobile} /> : <Outlet />}
     </>
   );
 };

@@ -10,7 +10,6 @@ const HeaderLayout: React.FC = () => {
         <Text>STRUCTURE</Text>
         <Text>SURFCACE</Text>
       </Container>
-      <Outlet />
     </>
   );
 };

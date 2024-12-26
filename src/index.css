@@ -1,0 +1,3 @@
+.withAfter::after {
+    content: none !important;
+}
