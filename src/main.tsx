@@ -2,9 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import MainLayout from "./layout/MainLayout";
+// import HeaderLayout from "./pages/HeaderLayout";
+// import Mobile from "./pages/Mobile";
 import Planet from "./pages/Planet";
-import MainLayout from "./pages/MainLayout";
-import HeaderLayout from "./pages/HeaderLayout";
 
 const router = createBrowserRouter([
   {
@@ -12,14 +13,8 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path: "/",
-        element: <HeaderLayout />,
-        children: [
-          {
-            path: "/",
-            element: <Planet />,
-          },
-        ],
+        path: "/:name",
+        element: <Planet />,
       },
     ],
   },

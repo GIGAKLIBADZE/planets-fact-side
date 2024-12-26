@@ -28,7 +28,7 @@ export const Title = styled.h1`
   color: #fff;
 `;
 
-export const Menu = styled.img`
+export const Burger = styled.img`
   width: 2.4rem;
   height: 1.7rem;
 `;

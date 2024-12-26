@@ -1,8 +1,6 @@
 import React from "react";
-import GlobalStyles from "../Globaltyles";
 import data from "../data.json";
 import IconSource from "/assets/icon-source.svg";
-import IconArrow from "/assets/icon-chevron.svg";
 import {
   Wikipedia,
   About,
@@ -15,46 +13,49 @@ import {
   Info,
   Container,
 } from "../components/PlanetStyles";
-import {
-  RoundColor,
-  EachPlanet,
-  Arrow,
-  EachPlanetContainer,
-  SubContainer,
-} from "../components/MenuStyles";
+
+import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Planet: React.FC = () => {
+  const { name } = useParams();
+  console.log(name);
+
+  console.log(location.pathname);
+
+  const planet = data.find((d) => d.name === name);
+  console.log(planet);
+
   return (
     <>
-      <GlobalStyles />
       <Container>
-        <PlanetPicture src={data[0].images.planet} alt="Mercury" />
-        <PlanetName>{data[0].name}</PlanetName>
-        <About>{data[0].overview.content}</About>
+        <PlanetPicture src={planet?.images.planet} alt="Mercury" />
+        <PlanetName>{planet?.name}</PlanetName>
+        <About>{planet?.overview.content}</About>
         <SourceContainer>
           <Source>
             {" "}
             Source :
-            <Wikipedia href={data[0].overview.source}> Wikipedia</Wikipedia>
+            <Wikipedia href={planet?.overview.source}> Wikipedia</Wikipedia>
           </Source>
           <img src={IconSource} />
         </SourceContainer>
         <Section>
           <div>
             <InfoTitle>ROTATION TIME</InfoTitle>
-            <Info>{data[0].rotation}</Info>
+            <Info>{planet?.rotation}</Info>
           </div>
           <div>
             <InfoTitle>REVOLUTION TIME</InfoTitle>
-            <Info>{data[0].revolution}</Info>
+            <Info>{planet?.revolution}</Info>
           </div>
           <div>
             <InfoTitle>RADIUS</InfoTitle>
-            <Info>{data[0].radius}</Info>
+            <Info>{planet?.radius}</Info>
           </div>
           <div>
             <InfoTitle>AVERAGE TEMP.</InfoTitle>
-            <Info>{data[0].temperature}</Info>
+            <Info>{planet?.temperature}</Info>
           </div>
         </Section>
       </Container>
