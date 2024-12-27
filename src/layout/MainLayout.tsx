@@ -11,6 +11,7 @@ import HeaderLayout from "../pages/HeaderLayout";
 
 const MainLayout: React.FC = () => {
   const [mobile, setMobile] = useState<boolean>(false);
+  // const [structure, setStructure] = useState<boolean>(false);
 
   return (
     <>
@@ -23,7 +24,12 @@ const MainLayout: React.FC = () => {
           onClick={() => setMobile(!mobile)}
         />
       </Header>
-      {mobile ? "" : <HeaderLayout />}
+      {/* {mobile ? (
+        ""
+      ) : (
+        // <HeaderLayout structure={structure} setStructure={setStructure} />
+        <HeaderLayout />
+      )} */}
       {mobile ? <Menu mobile={mobile} setMobile={setMobile} /> : <Outlet />}
     </>
   );

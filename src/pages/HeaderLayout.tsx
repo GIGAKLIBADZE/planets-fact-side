@@ -2,13 +2,16 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { Container, Text } from "../components/HeaderLayoutStyles";
 
-const HeaderLayout: React.FC = () => {
+const HeaderLayout: React.FC<{
+  filter: string;
+  setFilter: React.Dispatch<React.SetStateAction<string>>;
+}> = ({ filter, setFilter }) => {
   return (
     <>
       <Container>
-        <Text>OVERVIEW</Text>
-        <Text>STRUCTURE</Text>
-        <Text>SURFCACE</Text>
+        <Text onClick={() => setFilter("OVERVIEW")}>OVERVIEW</Text>
+        <Text onClick={() => setFilter("STRUCTURE")}>STRUCTURE</Text>
+        <Text onClick={() => setFilter("SURFACE")}>SURFCACE</Text>
       </Container>
     </>
   );

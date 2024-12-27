@@ -6,6 +6,7 @@ import MainLayout from "./layout/MainLayout";
 import HeaderLayout from "./pages/HeaderLayout";
 import Mobile from "./pages/Mobile";
 import Planet from "./pages/Planet";
+import Parent from "./components/Parent";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/:name",
-        element: <Planet />,
+        element: <Parent />,
       },
     ],
   },

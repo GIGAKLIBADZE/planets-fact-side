@@ -13,6 +13,12 @@ export const PlanetPicture = styled.img`
   margin-top: 9.5rem;
 `;
 
+export const GeologyPicture = styled.img`
+  width: 6rem;
+  height: 6rem;
+  margin-top: -4rem;
+`;
+
 export const PlanetName = styled.h2`
   font-size: 4rem;
   font-weight: 500;

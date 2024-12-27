@@ -12,12 +12,13 @@ import {
   InfoTitle,
   Info,
   Container,
+  GeologyPicture,
 } from "../components/PlanetStyles";
 
 import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-const Planet: React.FC = () => {
+const Planet: React.FC<{ filter: string }> = ({ filter }) => {
   const { name } = useParams();
 
   const planet = data.find((d) => d.name === name);
@@ -26,14 +27,46 @@ const Planet: React.FC = () => {
   return (
     <>
       <Container>
-        <PlanetPicture src={planet?.images.planet} alt="Mercury" />
+        <PlanetPicture
+          src={
+            filter === "OVERVIEW" || filter === "SURFACE"
+              ? planet?.images.planet
+              : planet?.images.internal
+          }
+          alt="Mercury"
+        />
+        {filter === "SURFACE" ? (
+          <GeologyPicture src={planet?.images.geology} />
+        ) : null}
+
         <PlanetName>{planet?.name}</PlanetName>
-        <About>{planet?.overview.content}</About>
+        <About>
+          {filter === "OVERVIEW"
+            ? planet?.overview.content
+            : filter === "STRUCTURE"
+            ? planet?.structure.content
+            : filter === "SURFACE"
+            ? planet?.geology.content
+            : null}
+        </About>
         <SourceContainer>
           <Source>
             {" "}
             Source :
-            <Wikipedia href={planet?.overview.source}> Wikipedia</Wikipedia>
+            <Wikipedia
+              href={
+                filter === "OVERVIEW"
+                  ? planet?.overview.source
+                  : filter === "STRUCTURE"
+                  ? planet?.structure.source
+                  : filter === "SURFACE"
+                  ? planet?.geology.source
+                  : ""
+              }
+            >
+              {" "}
+              Wikipedia
+            </Wikipedia>
           </Source>
           <img src={IconSource} />
         </SourceContainer>
