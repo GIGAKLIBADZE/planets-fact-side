@@ -1,29 +1,4 @@
-import styled from "styled-components";
-
-interface Idata {
-  name: string;
-  overview: {
-    content: string;
-    source: string;
-  };
-  structure: {
-    content: string;
-    source: string;
-  };
-  geology: {
-    content: string;
-    source: string;
-  };
-  rotation: string;
-  revolution: string;
-  radius: string;
-  temperature: string;
-  images: {
-    planet: string;
-    internal: string;
-    geology: string;
-  };
-}
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -45,23 +20,18 @@ export const Container = styled.div`
   }
 `;
 
-export const Text = styled.p<{ planetName: string | undefined }>`
+export const Text = styled.p<{
+  planetName: string | undefined;
+}>`
   display: flex;
   font-size: 0.9rem;
   font-weight: bold;
   line-height: normal;
   letter-spacing: 1.93px;
   color: #fff;
-  opacity: 0.5;
   position: relative;
 
   &::after {
-    content: "";
-    position: absolute;
-    bottom: -2rem;
-    left: -7%;
-    width: 110%;
-    height: 0.4rem;
     background: ${({ planetName }) =>
       planetName === "Mercury"
         ? "#419ebb"

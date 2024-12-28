@@ -19,26 +19,23 @@ const HeaderLayout: React.FC<{
       <Container>
         <Text
           planetName={planetName}
-          // $filter={filter}
           onClick={() => setFilter("OVERVIEW")}
-          // className={filter === "OVERVIEW" ? "textAfter" : ""}
+          className={filter === "OVERVIEW" ? "textAfter" : ""}
           // style={{ color: planet?.name === "MERCURY" ? "red" : "white" }}
         >
           OVERVIEW
         </Text>
         <Text
           planetName={planetName}
-          // $filter={filter}
           onClick={() => setFilter("STRUCTURE")}
-          // className={filter === "STRUCTURE" ? "textAfter" : ""}
+          className={filter === "STRUCTURE" ? "textAfter" : ""}
         >
           STRUCTURE
         </Text>
         <Text
           planetName={planetName}
-          // $filter={filter}
           onClick={() => setFilter("SURFACE")}
-          // className={filter === "SURFACE" ? "textAfter" : ""}
+          className={filter === "SURFACE" ? "textAfter" : ""}
         >
           SURFCACE
         </Text>
