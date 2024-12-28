@@ -1,5 +1,30 @@
 import styled from "styled-components";
 
+interface Idata {
+  name: string;
+  overview: {
+    content: string;
+    source: string;
+  };
+  structure: {
+    content: string;
+    source: string;
+  };
+  geology: {
+    content: string;
+    source: string;
+  };
+  rotation: string;
+  revolution: string;
+  radius: string;
+  temperature: string;
+  images: {
+    planet: string;
+    internal: string;
+    geology: string;
+  };
+}
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -20,7 +45,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Text = styled.p`
+export const Text = styled.p<{ planetName: string | undefined }>`
   display: flex;
   font-size: 0.9rem;
   font-weight: bold;
@@ -30,15 +55,32 @@ export const Text = styled.p`
   opacity: 0.5;
   position: relative;
 
-  /* &::after {
+  &::after {
     content: "";
     position: absolute;
     bottom: -2rem;
     left: -7%;
     width: 110%;
     height: 0.4rem;
-    background: #2d68f0;
-  } */
+    background: ${({ planetName }) =>
+      planetName === "Mercury"
+        ? "#419ebb"
+        : planetName === "Venus"
+        ? "#eda249"
+        : planetName === "Earth"
+        ? "#6d2ed5"
+        : planetName === "Mars"
+        ? "#d14c32"
+        : planetName === "Jupiter"
+        ? "#d83a34"
+        : planetName === "Saturn"
+        ? "#cd5120"
+        : planetName === "Uranus"
+        ? "#1ec1a2"
+        : planetName === "Neptune"
+        ? "#2d68f0"
+        : ""};
+  }
 `;
 
 export const TextPaddle = styled.div`
