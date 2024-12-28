@@ -1,3 +1,13 @@
 .withAfter::after {
     content: none !important;
 }
+
+.textAfter::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    left: -7%;
+    width: 110%;
+    height: 0.4rem;
+    background: #2d68f0;
+}

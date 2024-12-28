@@ -7,11 +7,11 @@ import Planet from "../pages/Planet";
 import Menu from "../components/Menu";
 import GlobalStyles from "../Globaltyles";
 import data from "../data.json";
-import HeaderLayout from "../pages/HeaderLayout";
+// import HeaderLayout from "../pages/HeaderLayout";
+// import Header from "../components/Header";
 
 const MainLayout: React.FC = () => {
   const [mobile, setMobile] = useState<boolean>(false);
-  // const [structure, setStructure] = useState<boolean>(false);
 
   return (
     <>
@@ -24,12 +24,6 @@ const MainLayout: React.FC = () => {
           onClick={() => setMobile(!mobile)}
         />
       </Header>
-      {/* {mobile ? (
-        ""
-      ) : (
-        // <HeaderLayout structure={structure} setStructure={setStructure} />
-        <HeaderLayout />
-      )} */}
       {mobile ? <Menu mobile={mobile} setMobile={setMobile} /> : <Outlet />}
     </>
   );

@@ -68,7 +68,7 @@ const Planet: React.FC<{ filter: string }> = ({ filter }) => {
               Wikipedia
             </Wikipedia>
           </Source>
-          <img src={IconSource} />
+          <img src={IconSource} style={{ marginLeft: "0.2rem" }} />
         </SourceContainer>
         <Section>
           <div>
