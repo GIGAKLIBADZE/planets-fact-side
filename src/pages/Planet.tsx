@@ -13,6 +13,8 @@ import {
   Info,
   Container,
   GeologyPicture,
+  TabletPlanetAndFilterContainer,
+  TabletPlanetContainer,
 } from "../components/PlanetStyles";
 
 import { useParams } from "react-router-dom";
@@ -43,14 +45,8 @@ const Planet: React.FC<{ filter: string; media: boolean }> = ({
           <GeologyPicture src={planet?.images.geology} />
         ) : null}
 
-        <div style={{ display: "flex", marginTop: "9.8rem", gap: "6.9rem" }}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+        <TabletPlanetAndFilterContainer>
+          <TabletPlanetContainer>
             <PlanetName>{planet?.name}</PlanetName>
             <About>
               {filter === "OVERVIEW"
@@ -82,40 +78,9 @@ const Planet: React.FC<{ filter: string; media: boolean }> = ({
               </Source>
               <img src={IconSource} style={{ marginLeft: "0.2rem" }} />
             </SourceContainer>
-          </div>
-          {/* <PlanetName>{planet?.name}</PlanetName>
-          <About>
-            {filter === "OVERVIEW"
-              ? planet?.overview.content
-              : filter === "STRUCTURE"
-              ? planet?.structure.content
-              : filter === "SURFACE"
-              ? planet?.geology.content
-              : null}
-          </About>
-          <SourceContainer>
-            <Source>
-              {" "}
-              Source :
-              <Wikipedia
-                href={
-                  filter === "OVERVIEW"
-                    ? planet?.overview.source
-                    : filter === "STRUCTURE"
-                    ? planet?.structure.source
-                    : filter === "SURFACE"
-                    ? planet?.geology.source
-                    : ""
-                }
-              >
-                {" "}
-                Wikipedia
-              </Wikipedia>
-            </Source>
-            <img src={IconSource} style={{ marginLeft: "0.2rem" }} />
-          </SourceContainer> */}
+          </TabletPlanetContainer>
           {media ? <TabletFilter /> : null}
-        </div>
+        </TabletPlanetAndFilterContainer>
         <Section>
           <div>
             <InfoTitle>ROTATION TIME</InfoTitle>

@@ -15,12 +15,37 @@ export const PlanetPicture = styled.img`
   width: 11.1rem;
   height: 11.1rem;
   margin-top: 9.5rem;
+
+  @media (min-width: 4rem) {
+    margin-top: 14.6rem;
+  }
 `;
 
 export const GeologyPicture = styled.img`
   width: 6rem;
   height: 6rem;
   margin-top: -4rem;
+`;
+
+export const TabletPlanetAndFilterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6.9rem;
+  margin-top: 9.8rem;
+
+  /* @media (min-width: 768px) {
+    display: block;
+  } */
+`;
+
+export const TabletPlanetContainer = styled.div`
+  display: flex;
+  flex-direction: columns;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `;
 
 export const PlanetName = styled.h2`
@@ -31,6 +56,11 @@ export const PlanetName = styled.h2`
   color: #fff;
   font-family: "Antonio";
   /* margin-top: 9.8rem; */
+
+  @media (min-width: 768px) {
+    font-size: 4.8rem;
+    text-align: left;
+  }
 `;
 
 export const About = styled.p`
@@ -41,6 +71,11 @@ export const About = styled.p`
   color: #fff;
   font-family: "League Spartan";
   margin-top: 1.6rem;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    margin-top: 2.4rem;
+  }
 `;
 
 export const SourceContainer = styled.div`
@@ -87,6 +122,20 @@ export const Section = styled.section`
     bottom: 0;
     border: solid 1px #fff;
     opacity: 0.2;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 1.1rem;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 0.6rem;
+      padding: 1.6rem 2.6rem 1.9rem 1.5rem;
+      width: 16.4rem;
+    }
   }
 `;
 
