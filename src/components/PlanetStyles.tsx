@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 2.4rem 4.7rem 2.4rem;
+
+  @media (min-width: 4rem) {
+    padding: 0 4rem 3.6rem 4rem;
+  }
 `;
 
 export const PlanetPicture = styled.img`
@@ -26,7 +30,7 @@ export const PlanetName = styled.h2`
   text-align: center;
   color: #fff;
   font-family: "Antonio";
-  margin-top: 9.8rem;
+  /* margin-top: 9.8rem; */
 `;
 
 export const About = styled.p`

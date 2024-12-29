@@ -11,7 +11,7 @@ const Parent: React.FC = () => {
   return (
     <>
       {media ? null : <HeaderLayout filter={filter} setFilter={setFilter} />}
-      <Planet filter={filter} />
+      <Planet filter={filter} media={media} />
     </>
   );
 };

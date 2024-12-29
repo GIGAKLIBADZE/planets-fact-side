@@ -1,5 +1,5 @@
 import React from "react";
-import { Planet, PlanetMenuContainer, Title } from "./TabletMenuStyles";
+import { Planet, PlanetMenuContainer } from "./TabletMenuStyles";
 
 const TabletMenu: React.FC = () => {
   return (

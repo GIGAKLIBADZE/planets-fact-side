@@ -21,7 +21,7 @@ export const Header = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: column;
-    gap: 3.3rem;
+    gap: 4.3rem;
     padding: 3.2rem 0 2.7rem;
   }
 `;
