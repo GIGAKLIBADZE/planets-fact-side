@@ -7,7 +7,7 @@ const TabletMenu: React.FC = () => {
       {/* <Title>THE PLANETS</Title> */}
       <PlanetMenuContainer>
         <Planet>MERCURY</Planet>
-        <Planet>vENUS</Planet>
+        <Planet>VENUS</Planet>
         <Planet>EARTH</Planet>
         <Planet>MARS</Planet>
         <Planet>JUPITER</Planet>

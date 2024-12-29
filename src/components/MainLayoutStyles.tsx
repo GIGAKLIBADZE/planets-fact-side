@@ -4,7 +4,7 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.6rem 2.4rem;
+  padding: 1.6rem;
   font-family: "Antonio";
   position: relative;
 
@@ -18,6 +18,12 @@ export const Header = styled.div`
     background: #fff;
     opacity: 0.2;
   }
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    gap: 3.3rem;
+    padding: 3.2rem 0 2.7rem;
+  }
 `;
 
 export const Title = styled.h1`
@@ -26,6 +32,10 @@ export const Title = styled.h1`
   line-height: normal;
   letter-spacing: -0.05px;
   color: #fff;
+
+  @media (min-width: 768px) {
+    letter-spacing: -1.05px;
+  }
 `;
 
 export const Burger = styled.img`
