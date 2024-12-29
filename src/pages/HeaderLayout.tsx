@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { Container, Text, TextPaddle } from "../components/HeaderLayoutStyles";
+import { Container, Text } from "../components/HeaderLayoutStyles";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
 
@@ -12,7 +12,6 @@ const HeaderLayout: React.FC<{
 
   const planet = data.find((d) => d.name === name);
   const planetName = planet?.name;
-  console.log(planetName);
 
   return (
     <>
@@ -21,7 +20,6 @@ const HeaderLayout: React.FC<{
           planetName={planetName}
           onClick={() => setFilter("OVERVIEW")}
           className={filter === "OVERVIEW" ? "textAfter" : ""}
-          // style={{ color: planet?.name === "MERCURY" ? "red" : "white" }}
         >
           OVERVIEW
         </Text>

@@ -31,4 +31,8 @@ export const Title = styled.h1`
 export const Burger = styled.img`
   width: 2.4rem;
   height: 1.7rem;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;

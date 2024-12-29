@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Title = styled.h1`
-  font-size: 2.8rem;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -1.05px;
-  color: #fff;
-  font-family: "Antonio";
-`;
+// export const Title = styled.h1`
+//   font-size: 2.8rem;
+//   font-weight: 500;
+//   line-height: normal;
+//   letter-spacing: -1.05px;
+//   color: #fff;
+//   font-family: "Antonio";
+// `;
 
 export const PlanetMenuContainer = styled.nav`
   display: flex;

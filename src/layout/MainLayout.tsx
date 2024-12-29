@@ -7,22 +7,31 @@ import Planet from "../pages/Planet";
 import Menu from "../components/Menu";
 import GlobalStyles from "../Globaltyles";
 import data from "../data.json";
-// import HeaderLayout from "../pages/HeaderLayout";
-// import Header from "../components/Header";
+import TabletMenu from "../components/TabletMenu";
+// import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useMediaQuery } from "@mui/material";
 
 const MainLayout: React.FC = () => {
   const [mobile, setMobile] = useState<boolean>(false);
+  const tablet = useMediaQuery("(min-width: 768px)");
+  console.log(tablet);
 
   return (
     <>
       <GlobalStyles />
       <Header>
         <Title>THE PLANETS</Title>
-        <Burger
-          src={Hamburger}
-          alt="Hamburger"
-          onClick={() => setMobile(!mobile)}
-        />
+
+        {tablet ? (
+          <TabletMenu />
+        ) : (
+          // <p>Hello</p>
+          <Burger
+            src={Hamburger}
+            alt="Hamburger"
+            onClick={() => setMobile(!mobile)}
+          />
+        )}
       </Header>
       {mobile ? <Menu mobile={mobile} setMobile={setMobile} /> : <Outlet />}
     </>
