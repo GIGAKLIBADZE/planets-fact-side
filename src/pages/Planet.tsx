@@ -28,7 +28,6 @@ const Planet: React.FC<{ filter: string; media: boolean }> = ({
   const { name } = useParams();
 
   const planet = data.find((d) => d.name === name);
-  console.log(planet);
 
   return (
     <>

@@ -17,7 +17,6 @@ const Menu: React.FC<{
   setMobile: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ mobile, setMobile }) => {
   const navigate = useNavigate();
-  // console.log(navigate);
   return (
     <>
       <Navbar>
