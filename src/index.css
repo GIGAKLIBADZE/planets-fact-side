@@ -9,5 +9,8 @@
     left: -7%;
     width: 110%;
     height: 0.4rem;
-    /* background: #2d68f0; */
+}
+
+.clicked {
+    border: none
 }

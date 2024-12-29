@@ -21,10 +21,11 @@ import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import TabletFilter from "../components/TabletFilter";
 
-const Planet: React.FC<{ filter: string; media: boolean }> = ({
-  filter,
-  media,
-}) => {
+const Planet: React.FC<{
+  filter: string;
+  setFilter: React.Dispatch<React.SetStateAction<string>>;
+  media: boolean;
+}> = ({ filter, setFilter, media }) => {
   const { name } = useParams();
 
   const planet = data.find((d) => d.name === name);
@@ -78,7 +79,9 @@ const Planet: React.FC<{ filter: string; media: boolean }> = ({
               <img src={IconSource} style={{ marginLeft: "0.2rem" }} />
             </SourceContainer>
           </TabletPlanetContainer>
-          {media ? <TabletFilter /> : null}
+          {media ? (
+            <TabletFilter filter={filter} setFilter={setFilter} />
+          ) : null}
         </TabletPlanetAndFilterContainer>
         <Section>
           <div>
