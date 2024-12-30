@@ -40,7 +40,7 @@ export const TabletPlanetAndFilterContainer = styled.div`
 
 export const TabletPlanetContainer = styled.div`
   display: flex;
-  flex-direction: columns;
+  flex-direction: column;
   align-items: center;
 
   @media (min-width: 768px) {

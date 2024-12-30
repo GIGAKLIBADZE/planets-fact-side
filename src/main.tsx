@@ -7,12 +7,18 @@ import HeaderLayout from "./pages/HeaderLayout";
 import Mobile from "./pages/Mobile";
 import Planet from "./pages/Planet";
 import Parent from "./components/Parent";
+import TabletFilter from "./components/TabletFilter";
+import TabletMenu from "./components/TabletMenu";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
     children: [
+      {
+        index: true,
+        element: <TabletMenu />,
+      },
       {
         path: "/:name",
         element: <Parent />,
