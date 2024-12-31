@@ -15,6 +15,7 @@ import {
   GeologyPicture,
   TabletPlanetAndFilterContainer,
   TabletPlanetContainer,
+  MainContainer,
 } from "../components/PlanetStyles";
 
 import { useParams } from "react-router-dom";
@@ -33,56 +34,72 @@ const Planet: React.FC<{
   return (
     <>
       <Container>
-        <PlanetPicture
-          src={
-            filter === "OVERVIEW" || filter === "SURFACE"
-              ? planet?.images.planet
-              : planet?.images.internal
-          }
-          alt="Mercury"
-        />
-        {filter === "SURFACE" ? (
-          <GeologyPicture src={planet?.images.geology} />
-        ) : null}
+        <MainContainer>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <PlanetPicture
+              src={
+                filter === "OVERVIEW" || filter === "SURFACE"
+                  ? planet?.images.planet
+                  : planet?.images.internal
+              }
+              alt="Mercury"
+            />
+            {filter === "SURFACE" ? (
+              <GeologyPicture src={planet?.images.geology} />
+            ) : null}
+          </div>
+          {/* <PlanetPicture
+            src={
+              filter === "OVERVIEW" || filter === "SURFACE"
+                ? planet?.images.planet
+                : planet?.images.internal
+            }
+            alt="Mercury"
+          />
+          {filter === "SURFACE" ? (
+            <GeologyPicture src={planet?.images.geology} />
+          ) : null} */}
 
-        <TabletPlanetAndFilterContainer>
-          <TabletPlanetContainer>
-            <PlanetName>{planet?.name}</PlanetName>
-            <About>
-              {filter === "OVERVIEW"
-                ? planet?.overview.content
-                : filter === "STRUCTURE"
-                ? planet?.structure.content
-                : filter === "SURFACE"
-                ? planet?.geology.content
-                : null}
-            </About>
-            <SourceContainer>
-              <Source>
-                {" "}
-                Source :
-                <Wikipedia
-                  href={
-                    filter === "OVERVIEW"
-                      ? planet?.overview.source
-                      : filter === "STRUCTURE"
-                      ? planet?.structure.source
-                      : filter === "SURFACE"
-                      ? planet?.geology.source
-                      : ""
-                  }
-                >
+          <TabletPlanetAndFilterContainer>
+            <TabletPlanetContainer>
+              <PlanetName>{planet?.name}</PlanetName>
+              <About>
+                {filter === "OVERVIEW"
+                  ? planet?.overview.content
+                  : filter === "STRUCTURE"
+                  ? planet?.structure.content
+                  : filter === "SURFACE"
+                  ? planet?.geology.content
+                  : null}
+              </About>
+              <SourceContainer>
+                <Source>
                   {" "}
-                  Wikipedia
-                </Wikipedia>
-              </Source>
-              <img src={IconSource} style={{ marginLeft: "0.2rem" }} />
-            </SourceContainer>
-          </TabletPlanetContainer>
-          {media ? (
-            <TabletFilter filter={filter} setFilter={setFilter} />
-          ) : null}
-        </TabletPlanetAndFilterContainer>
+                  Source :
+                  <Wikipedia
+                    href={
+                      filter === "OVERVIEW"
+                        ? planet?.overview.source
+                        : filter === "STRUCTURE"
+                        ? planet?.structure.source
+                        : filter === "SURFACE"
+                        ? planet?.geology.source
+                        : ""
+                    }
+                  >
+                    {" "}
+                    Wikipedia
+                  </Wikipedia>
+                </Source>
+                <img src={IconSource} style={{ marginLeft: "0.2rem" }} />
+              </SourceContainer>
+            </TabletPlanetContainer>
+
+            {media ? (
+              <TabletFilter filter={filter} setFilter={setFilter} />
+            ) : null}
+          </TabletPlanetAndFilterContainer>
+        </MainContainer>
         <Section>
           <div>
             <InfoTitle>ROTATION TIME</InfoTitle>

@@ -24,6 +24,12 @@ export const NotMobileFilter = styled.div`
   width: 28.1rem;
   height: 4rem;
   position: relative;
+
+  @media (min-width: 1440px) {
+    width: 35rem;
+    height: 4.8rem;
+    gap: 1.6rem;
+  }
 `;
 
 export const FilterText = styled.span`
@@ -33,4 +39,11 @@ export const FilterText = styled.span`
   letter-spacing: 1.93px;
   color: #fff;
   font-family: "League Spartan";
+
+  @media (min-width: 1440px) {
+    font-size: 1.2rem;
+    line-height: 2.8;
+    letter-spacing: 2.57px;
+    text-align: left;
+  }
 `;

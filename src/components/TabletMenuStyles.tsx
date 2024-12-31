@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const PlanetMenuContainer = styled.nav`
   display: flex;
-  gap: 3.3rem;
+  /* justify-content: space-between; */
+  gap: 4rem;
 `;
 
 export const Planet = styled.p`
