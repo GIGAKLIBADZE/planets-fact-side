@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const PlanetMenuContainer = styled.nav`
   display: flex;
-  /* justify-content: space-between; */
   gap: 4rem;
 `;
 
@@ -14,4 +13,14 @@ export const Planet = styled.p`
   color: #fff;
   font-family: "League Spartan";
   opacity: 0.75;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2.8rem;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+  }
 `;

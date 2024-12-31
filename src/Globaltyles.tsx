@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
         min-height: 100vh;
         background-image: url("./assets/background-stars.svg");
         background-color: #070724;
+        overflow-x: hidden;
     }
 `;
 

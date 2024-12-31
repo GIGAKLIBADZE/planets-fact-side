@@ -218,6 +218,7 @@ export const Section = styled.section`
   @media (min-width: 1440px) {
     margin-top: 8.7rem;
     gap: 3rem;
+    margin-left: -6rem;
   }
 `;
 

@@ -14,3 +14,39 @@
 .clicked {
     border: none
 }
+
+
+
+.hoveredMercury:hover::before {
+    background: #419ebb;
+}
+
+.hoveredVenus:hover::before {
+    background: #eda249;
+}
+
+.hoveredEarth:hover::before {
+    background: #6d2ed5;
+}
+
+.hoveredMars:hover::before {
+    background:#d14c32
+}
+
+.hoveredJupiter:hover::before {
+    background:#d83a34
+}
+
+.hoveredSaturn:hover::before {
+    background:#cd5120
+}
+
+.hoveredUranus:hover::before {
+    background:#1ec1a2
+}
+
+.hoveredNeptune:hover::before {
+    background: #2d68f0;
+}
+
+
