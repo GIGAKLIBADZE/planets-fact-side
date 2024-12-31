@@ -12,12 +12,13 @@ export const Section = styled.section`
     right: 0;
     bottom: 0;
     left: 0;
-    /* border: solid 1px #fff; */
+    border: solid 1px #fff;
     opacity: 0.2;
   }
 
   & > div:hover {
-    opacity: 0.2;
+    background-color: #d8d8d8;
+    /* opacity: 0.2; */
   }
 `;
 

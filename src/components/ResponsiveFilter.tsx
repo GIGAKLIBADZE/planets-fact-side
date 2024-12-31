@@ -36,7 +36,7 @@ const ResponsiveFilter: React.FC<{
                 ? "#2d68f0"
                 : "",
           }}
-          className={filter === "OVERVIEW" ? "noClicked" : "clicked"}
+          className={filter === "OVERVIEW" ? "clicked" : "noClicked"}
         >
           <FilterText style={{ opacity: 0.5, marginLeft: "2rem" }}>
             {" "}
@@ -66,7 +66,7 @@ const ResponsiveFilter: React.FC<{
                 ? "#2d68f0"
                 : "",
           }}
-          className="clicked"
+          className={filter === "STRUCTURE" ? "clicked" : "noClicked"}
         >
           <FilterText style={{ opacity: 0.5, marginLeft: "2rem" }}>
             {" "}
@@ -96,7 +96,7 @@ const ResponsiveFilter: React.FC<{
                 ? "#2d68f0"
                 : "",
           }}
-          className="clicked"
+          className={filter === "SURFACE" ? "clicked" : "noClicked"}
         >
           <FilterText style={{ opacity: 0.5, marginLeft: "2rem" }}>
             {" "}

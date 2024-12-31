@@ -17,7 +17,7 @@ Users should be able to:
 ### Links
 
 Solution URL: [https://github.com/GIGAKLIBADZE/planets-fact-side]
-Live Site URL: [https://todo-app-psi-five-85.vercel.app/]
+Live Site URL: [https://planets-fact-side-nvw8.vercel.app/]
 
 ## My process
 
@@ -34,7 +34,7 @@ React Router
 
 ### What I learned
 
-After creating some basic projects in React JS, I can confidently say that I am now familiar with some advanced concepts of this library. In this project I introduce some brand new hooks for me like: useMediaQuery, useLocation, useNavigate... I have also deepened my knowledge TypeScript. I plan to continue working on projects involving React and TypeScript to further enhance my understanding.
+After creating some basic projects in React JS, I can confidently say that I am now familiar with some advanced concepts of this library. I build a project using React Router for the first time in my React journey. In this project I introduce some brand new hooks for me like: useMediaQuery, useLocation, useNavigate... I have also deepened my knowledge TypeScript. I plan to continue working on projects involving React and TypeScript to further enhance my understanding.
 
 ### Continued development
 
