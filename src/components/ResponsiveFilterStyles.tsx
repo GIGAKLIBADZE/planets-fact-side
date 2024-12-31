@@ -12,7 +12,12 @@ export const Section = styled.section`
     right: 0;
     bottom: 0;
     left: 0;
-    border: solid 1px #fff;
+    /* border: solid 1px #fff; */
+    opacity: 0.2;
+  }
+
+  & > div:hover {
+    background-color: #d8d8d8;
     opacity: 0.2;
   }
 `;
@@ -23,6 +28,7 @@ export const NotMobileFilter = styled.div`
   gap: 1.7rem;
   width: 28.1rem;
   height: 4rem;
+  cursor: pointer;
   position: relative;
 
   @media (min-width: 1440px) {
@@ -39,6 +45,7 @@ export const FilterText = styled.span`
   letter-spacing: 1.93px;
   color: #fff;
   font-family: "League Spartan";
+  z-index: 99;
 
   @media (min-width: 1440px) {
     font-size: 1.2rem;

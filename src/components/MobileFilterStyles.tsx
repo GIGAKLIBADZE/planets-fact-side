@@ -21,7 +21,7 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.p<{
-  planetName: string | undefined;
+  $planetName: string | undefined;
 }>`
   display: flex;
   font-size: 0.9rem;
@@ -32,22 +32,22 @@ export const Text = styled.p<{
   position: relative;
 
   &::after {
-    background: ${({ planetName }) =>
-      planetName === "Mercury"
+    background: ${({ $planetName }) =>
+      $planetName === "Mercury"
         ? "#419ebb"
-        : planetName === "Venus"
+        : $planetName === "Venus"
         ? "#eda249"
-        : planetName === "Earth"
+        : $planetName === "Earth"
         ? "#6d2ed5"
-        : planetName === "Mars"
+        : $planetName === "Mars"
         ? "#d14c32"
-        : planetName === "Jupiter"
+        : $planetName === "Jupiter"
         ? "#d83a34"
-        : planetName === "Saturn"
+        : $planetName === "Saturn"
         ? "#cd5120"
-        : planetName === "Uranus"
+        : $planetName === "Uranus"
         ? "#1ec1a2"
-        : planetName === "Neptune"
+        : $planetName === "Neptune"
         ? "#2d68f0"
         : ""};
   }

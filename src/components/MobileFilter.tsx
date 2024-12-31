@@ -16,21 +16,21 @@ const MobileFilter: React.FC<{
     <>
       <Container>
         <Text
-          planetName={planetName}
+          $planetName={planetName}
           onClick={() => setFilter("OVERVIEW")}
           className={filter === "OVERVIEW" ? "textAfter" : ""}
         >
           OVERVIEW
         </Text>
         <Text
-          planetName={planetName}
+          $planetName={planetName}
           onClick={() => setFilter("STRUCTURE")}
           className={filter === "STRUCTURE" ? "textAfter" : ""}
         >
           STRUCTURE
         </Text>
         <Text
-          planetName={planetName}
+          $planetName={planetName}
           onClick={() => setFilter("SURFACE")}
           className={filter === "SURFACE" ? "textAfter" : ""}
         >

@@ -36,7 +36,7 @@ const ResponsiveFilter: React.FC<{
                 ? "#2d68f0"
                 : "",
           }}
-          className="clicked"
+          className={filter === "OVERVIEW" ? "noClicked" : "clicked"}
         >
           <FilterText style={{ opacity: 0.5, marginLeft: "2rem" }}>
             {" "}
