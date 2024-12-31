@@ -9,6 +9,7 @@ import Planet from "./pages/Planet";
 import Parent from "./components/Parent";
 import TabletFilter from "./components/TabletFilter";
 import TabletMenu from "./components/TabletMenu";
+import Mercury from "./pages/Mercury";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <TabletMenu />,
+        element: <Mercury />,
       },
       {
         path: "/:name",

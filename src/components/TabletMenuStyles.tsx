@@ -15,12 +15,14 @@ export const Planet = styled.p`
   opacity: 0.75;
   position: relative;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -2.8rem;
-    left: 0;
-    width: 100%;
-    height: 0.4rem;
+  @media (min-width: 1440px) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2.8rem;
+      left: 0;
+      width: 100%;
+      height: 0.4rem;
+    }
   }
 `;
