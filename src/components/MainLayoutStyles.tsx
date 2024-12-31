@@ -24,6 +24,11 @@ export const Header = styled.div`
     gap: 4.3rem;
     padding: 3.2rem 0 2.7rem;
   }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    padding: 2.2rem 4.1rem 2.7rem 3.2rem;
+  }
 `;
 
 export const Title = styled.h1`
