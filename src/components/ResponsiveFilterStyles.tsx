@@ -17,7 +17,6 @@ export const Section = styled.section`
   }
 
   & > div:hover {
-    background-color: #d8d8d8;
     opacity: 0.2;
   }
 `;
@@ -45,7 +44,6 @@ export const FilterText = styled.span`
   letter-spacing: 1.93px;
   color: #fff;
   font-family: "League Spartan";
-  z-index: 99;
 
   @media (min-width: 1440px) {
     font-size: 1.2rem;
