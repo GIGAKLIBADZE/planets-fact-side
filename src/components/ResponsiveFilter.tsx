@@ -1,9 +1,9 @@
 import React from "react";
-import { Section, NotMobileFilter, FilterText } from "./TabletFilterStyles";
+import { Section, NotMobileFilter, FilterText } from "./ResponsiveFilterStyles";
 import data from "../data.json";
 import { useParams } from "react-router-dom";
 
-const TabletFilter: React.FC<{
+const ResponsiveFilter: React.FC<{
   filter: string;
   setFilter: React.Dispatch<React.SetStateAction<string>>;
 }> = ({ filter, setFilter }) => {
@@ -109,4 +109,4 @@ const TabletFilter: React.FC<{
   );
 };
 
-export default TabletFilter;
+export default ResponsiveFilter;

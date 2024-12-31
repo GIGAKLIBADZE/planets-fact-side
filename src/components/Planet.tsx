@@ -16,11 +16,11 @@ import {
   TabletPlanetAndFilterContainer,
   TabletPlanetContainer,
   MainContainer,
-} from "../components/PlanetStyles";
+} from "./PlanetStyles";
 
 import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import TabletFilter from "../components/TabletFilter";
+
+import TabletFilter from "./ResponsiveFilter";
 
 const Planet: React.FC<{
   filter: string;
@@ -48,18 +48,6 @@ const Planet: React.FC<{
               <GeologyPicture src={planet?.images.geology} />
             ) : null}
           </div>
-          {/* <PlanetPicture
-            src={
-              filter === "OVERVIEW" || filter === "SURFACE"
-                ? planet?.images.planet
-                : planet?.images.internal
-            }
-            alt="Mercury"
-          />
-          {filter === "SURFACE" ? (
-            <GeologyPicture src={planet?.images.geology} />
-          ) : null} */}
-
           <TabletPlanetAndFilterContainer>
             <TabletPlanetContainer>
               <PlanetName>{planet?.name}</PlanetName>

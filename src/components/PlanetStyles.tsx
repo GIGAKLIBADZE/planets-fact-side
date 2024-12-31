@@ -5,20 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 2.4rem 4.7rem 2.4rem;
-
-  @media (min-width: 768px) {
-    /* padding: 0 4rem 3.6rem 4rem; */
-    /* margin-top: 12.6rem; */
-    display: block;
-  }
-
-  @media (min-width: 768px) {
-    display: flex;
-  }
-
-  @media (min-width: 1440px) {
-    display: flex;
-  }
 `;
 
 export const PlanetPicture = styled.img`

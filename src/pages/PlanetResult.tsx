@@ -1,11 +1,10 @@
 import React from "react";
-import HeaderLayout from "../pages/HeaderLayout";
-import Planet from "../pages/Planet";
+import HeaderLayout from "../components/MobileFilter";
+import Planet from "../components/Planet";
 import { useState } from "react";
 import { useMediaQuery } from "@mui/material";
-import TabletFilter from "./TabletFilter";
 
-const Parent: React.FC = () => {
+const PlanetResult: React.FC = () => {
   const [filter, setFilter] = useState<string>("OVERVIEW");
   const media = useMediaQuery("(min-width: 768px)");
 
@@ -17,4 +16,4 @@ const Parent: React.FC = () => {
   );
 };
 
-export default Parent;
+export default PlanetResult;

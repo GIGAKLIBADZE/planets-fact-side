@@ -14,6 +14,7 @@ export const Planet = styled.p`
   font-family: "League Spartan";
   opacity: 0.75;
   position: relative;
+  cursor: pointer;
 
   @media (min-width: 1440px) {
     &::before {

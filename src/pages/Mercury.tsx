@@ -18,7 +18,7 @@ import {
   MainContainer,
 } from "../components/PlanetStyles";
 import { useState } from "react";
-import TabletFilter from "../components/TabletFilter";
+import TabletFilter from "../components/ResponsiveFilter";
 import { useMediaQuery } from "@mui/material";
 
 const Mercury: React.FC = () => {

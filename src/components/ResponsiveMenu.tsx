@@ -1,15 +1,10 @@
 import React from "react";
-import { Planet, PlanetMenuContainer } from "./TabletMenuStyles";
+import { Planet, PlanetMenuContainer } from "./ResponsiveMenuStyles";
 import { useNavigate } from "react-router-dom";
 import data from "../data.json";
-import { useParams } from "react-router-dom";
-import { useState } from "react";
 
-const TabletMenu: React.FC = () => {
+const ResponsiveMenu: React.FC = () => {
   const navigate = useNavigate();
-
-  const [hoveredPlanet, setHoveredPlanet] = useState<string>("Mercury");
-
   return (
     <>
       <PlanetMenuContainer>
@@ -66,4 +61,4 @@ const TabletMenu: React.FC = () => {
   );
 };
 
-export default TabletMenu;
+export default ResponsiveMenu;

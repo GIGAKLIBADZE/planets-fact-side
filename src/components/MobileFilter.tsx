@@ -1,10 +1,9 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import { Container, Text } from "../components/HeaderLayoutStyles";
+import { Container, Text } from "./MobileFilterStyles";
 import { useParams } from "react-router-dom";
 import data from "../data.json";
 
-const HeaderLayout: React.FC<{
+const MobileFilter: React.FC<{
   filter: string;
   setFilter: React.Dispatch<React.SetStateAction<string>>;
 }> = ({ filter, setFilter }) => {
@@ -42,4 +41,4 @@ const HeaderLayout: React.FC<{
   );
 };
 
-export default HeaderLayout;
+export default MobileFilter;

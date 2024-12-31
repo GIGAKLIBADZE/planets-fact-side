@@ -8,7 +8,6 @@ import {
   EachPlanet,
   Navbar,
 } from "./MenuStyles";
-import { Link } from "react-router-dom";
 import data from "../data.json";
 import { useNavigate } from "react-router-dom";
 
