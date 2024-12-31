@@ -16,9 +16,9 @@ export const Section = styled.section`
     opacity: 0.2;
   }
 
-  & > div:hover {
-    background-color: #d8d8d8;
-    /* opacity: 0.2; */
+  & > div:hover:before {
+    background: #d8d8d8;
+    opacity: 0.2;
   }
 `;
 
