@@ -8,6 +8,7 @@ const ResponsiveFilter: React.FC<{
   setFilter: React.Dispatch<React.SetStateAction<string>>;
 }> = ({ filter, setFilter }) => {
   const { name } = useParams();
+  const firstPlanet = data[0].name;
 
   const planet = data.find((d) => d.name === name);
   const planetName = planet?.name;
@@ -34,6 +35,8 @@ const ResponsiveFilter: React.FC<{
                 ? "#1ec1a2"
                 : filter === "OVERVIEW" && planetName === "Neptune"
                 ? "#2d68f0"
+                : filter === "OVERVIEW" && firstPlanet === "Mercury"
+                ? "#419ebb"
                 : "",
           }}
           className={filter === "OVERVIEW" ? "clicked" : "noClicked"}
@@ -64,6 +67,8 @@ const ResponsiveFilter: React.FC<{
                 ? "#1ec1a2"
                 : filter === "STRUCTURE" && planetName === "Neptune"
                 ? "#2d68f0"
+                : filter === "STRUCTURE" && firstPlanet === "Mercury"
+                ? "#419ebb"
                 : "",
           }}
           className={filter === "STRUCTURE" ? "clicked" : "noClicked"}
@@ -80,7 +85,9 @@ const ResponsiveFilter: React.FC<{
             backgroundColor:
               filter === "SURFACE" && planetName === "Mercury"
                 ? "#419ebb"
-                : filter === "SURFACE" && planetName === "Venus"
+                : // : filter === "SURFACE" && firstPlanet === "Mercury"
+                // ? "#419ebb"
+                filter === "SURFACE" && planetName === "Venus"
                 ? "#eda249"
                 : filter === "SURFACE" && planetName === "Earth"
                 ? "#6d2ed5"
@@ -94,6 +101,8 @@ const ResponsiveFilter: React.FC<{
                 ? "#1ec1a2"
                 : filter === "SURFACE" && planetName === "Neptune"
                 ? "#2d68f0"
+                : filter === "SURFACE" && firstPlanet === "Mercury"
+                ? "#419ebb"
                 : "",
           }}
           className={filter === "SURFACE" ? "clicked" : "noClicked"}

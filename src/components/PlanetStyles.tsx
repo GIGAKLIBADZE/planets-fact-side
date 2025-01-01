@@ -154,7 +154,7 @@ export const Wikipedia = styled.a`
   color: #fff;
 `;
 
-export const Section = styled.section`
+export const PlanetSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;

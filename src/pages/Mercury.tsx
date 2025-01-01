@@ -8,7 +8,7 @@ import {
   PlanetPicture,
   Source,
   SourceContainer,
-  Section,
+  PlanetSection,
   InfoTitle,
   Info,
   Container,
@@ -17,8 +17,9 @@ import {
   TabletPlanetContainer,
   MainContainer,
 } from "../components/PlanetStyles";
+
 import { useState } from "react";
-import TabletFilter from "../components/ResponsiveFilter";
+import ResponsiveFilter from "../components/ResponsiveFilter";
 import { useMediaQuery } from "@mui/material";
 
 const Mercury: React.FC = () => {
@@ -76,13 +77,12 @@ const Mercury: React.FC = () => {
                 <img src={IconSource} style={{ marginLeft: "0.2rem" }} />
               </SourceContainer>
             </TabletPlanetContainer>
-
             {media ? (
-              <TabletFilter filter={filter} setFilter={setFilter} />
+              <ResponsiveFilter filter={filter} setFilter={setFilter} />
             ) : null}
           </TabletPlanetAndFilterContainer>
         </MainContainer>
-        <Section>
+        <PlanetSection>
           <div>
             <InfoTitle>ROTATION TIME</InfoTitle>
             <Info>{data[0].rotation}</Info>
@@ -99,7 +99,7 @@ const Mercury: React.FC = () => {
             <InfoTitle>AVERAGE TEMP.</InfoTitle>
             <Info>{data[0].temperature}</Info>
           </div>
-        </Section>
+        </PlanetSection>
       </Container>
     </>
   );

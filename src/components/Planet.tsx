@@ -8,7 +8,7 @@ import {
   PlanetPicture,
   Source,
   SourceContainer,
-  Section,
+  PlanetSection,
   InfoTitle,
   Info,
   Container,
@@ -88,7 +88,7 @@ const Planet: React.FC<{
             ) : null}
           </TabletPlanetAndFilterContainer>
         </MainContainer>
-        <Section>
+        <PlanetSection>
           <div>
             <InfoTitle>ROTATION TIME</InfoTitle>
             <Info>{planet?.rotation}</Info>
@@ -105,7 +105,7 @@ const Planet: React.FC<{
             <InfoTitle>AVERAGE TEMP.</InfoTitle>
             <Info>{planet?.temperature}</Info>
           </div>
-        </Section>
+        </PlanetSection>
       </Container>
     </>
   );
