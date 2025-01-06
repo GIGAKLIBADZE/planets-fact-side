@@ -237,3 +237,16 @@ export const Info = styled.span`
     letter-spacing: -1.5px;
   }
 `;
+
+export const Invalid = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 20rem;
+`;
+
+export const InvalidText = styled.h1`
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Antonio";
+`;

@@ -1,11 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 import Layout from "./layout/Layout";
 import PlanetResult from "./pages/PlanetResult";
-
-import Mercury from "./pages/Mercury";
 
 const router = createBrowserRouter([
   {
@@ -13,12 +15,12 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        index: true,
-        element: <Mercury />,
-      },
-      {
         path: "/:name",
         element: <PlanetResult />,
+      },
+      {
+        path: "/",
+        element: <Navigate to="/Mercury" replace />,
       },
     ],
   },

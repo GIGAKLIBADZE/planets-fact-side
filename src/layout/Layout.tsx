@@ -22,7 +22,6 @@ const Layout: React.FC = () => {
         {tablet ? (
           <TabletMenu />
         ) : (
-          // <p>Hello</p>
           <Burger
             src={Hamburger}
             alt="Hamburger"

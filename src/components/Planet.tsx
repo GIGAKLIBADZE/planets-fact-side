@@ -16,6 +16,8 @@ import {
   TabletPlanetAndFilterContainer,
   TabletPlanetContainer,
   MainContainer,
+  Invalid,
+  InvalidText,
 } from "./PlanetStyles";
 
 import { useParams } from "react-router-dom";
@@ -30,6 +32,16 @@ const Planet: React.FC<{
   const { name } = useParams();
 
   const planet = data.find((d) => d.name === name);
+
+  if (!planet) {
+    return (
+      <>
+        <Invalid>
+          <InvalidText>Not found :(</InvalidText>
+        </Invalid>
+      </>
+    );
+  }
 
   return (
     <>
